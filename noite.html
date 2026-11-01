@@ -1,140 +1,182 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#F5EBD9">
 <title>Oração da Noite</title>
 
 <style>
-    body {
-        font-family: "Times New Roman", Times, serif;
-        background: #F5EBD9;
-        color: #29241F;
-        font-size: 18px;
-        line-height: 1.6;
-        margin: 0;
-        padding: 20px;
-    }
+* {
+  box-sizing: border-box;
+}
 
-    main {
-        max-width: 700px;
-        margin: 30px auto;
-    }
+body {
+  font-family: "Times New Roman", Times, serif;
+  background: #F5EBD9;
+  color: #29241F;
+  font-size: 22px;
+  line-height: 1.75;
+  margin: 0;
+  padding: 24px;
+  -webkit-text-size-adjust: 100%;
+}
 
-    h1 {
-        text-align: center;
-        font-size: 28px;
-        margin-bottom: 15px;
-        color: #FF0000;
-        font-weight: bold;
-    }
+main {
+  max-width: 680px;
+  margin: 25px auto;
+}
 
-    h2 {
-        font-size: 21px;
-        margin-top: 35px;
-        margin-bottom: 12px;
-        color: #0066CC;
-        font-weight: normal;
-    }
+h1 {
+  text-align: center;
+  font-size: 32px;
+  line-height: 1.3;
+  margin: 0 0 22px;
+  color: #FF0000;
+  font-weight: bold;
+}
 
-    p {
-        margin: 0 0 14px;
-        text-align: justify;
-    }
+h2 {
+  font-size: 26px;
+  line-height: 1.35;
+  margin-top: 38px;
+  margin-bottom: 18px;
+  color: #FF0000;
+  font-weight: normal;
+}
 
-    hr {
-        border: 0;
-        border-top: 1px solid #D2B99D;
-        margin: 25px 0;
-    }
+p {
+  margin: 0 0 20px;
+  text-align: left;
+}
 
-    .final {
-        text-align: center;
-        margin-top: 30px;
-        color: #FF0000;
-        font-weight: bold;
-        font-style: italic;
-    }
+hr {
+  border: 0;
+  border-top: 1px solid #D2B99D;
+  margin: 32px 0;
+}
 
-    /* Páginas individuais */
-    .pagina {
-        display: none;
-    }
+.final {
+  text-align: center;
+  margin-top: 38px;
+  color: #FF0000;
+  font-weight: bold;
+  font-style: italic;
+}
 
-    .pagina.ativa {
-        display: block;
-    }
+.pagina {
+  display: none;
+}
 
-    /* Links das orações */
-    .lista-oracoes a {
-        display: block;
-        color: #0066CC;
-        text-decoration: underline;
-        margin: 12px 0;
-        cursor: pointer;
-        font-size: 19px;
-        font-weight: normal;
-    }
+.pagina.ativa {
+  display: block;
+}
 
-    .lista-oracoes a:hover {
-        color: #FF0000;
-    }
+.lista-oracoes a {
+  display: block;
+  color: #0066CC;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  margin: 18px 0;
+  cursor: pointer;
+  font-size: 23px;
+  line-height: 1.5;
+  font-weight: normal;
+}
 
-    .voltar {
-        display: inline-block;
-        margin-bottom: 25px;
-        color: black;
-        text-decoration: underline;
-        cursor: pointer;
-        font-style: normal;
-    }
+.lista-oracoes a:hover {
+  color: #FF0000;
+}
 
-    .voltar:hover {
-        color: black;
-    }
+.voltar {
+  display: inline-block;
+  margin-bottom: 30px;
+  color: #0066CC;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+  font-size: 21px;
+}
 
-    .imagem-oracao {
-        display: block;
-        max-width: 100%;
-        width: 300px;
-        height: auto;
-        margin: 25px auto;
-        border-radius: 4px;
-    }
+.voltar:hover {
+  color: #FF0000;
+}
 
-    /* Orações tradicionais centralizadas */
-    .texto-oracao p {
-        text-align: center;
-    }
+.imagem-oracao {
+  display: block;
+  max-width: 100%;
+  width: 300px;
+  height: auto;
+  margin: 30px auto;
+  border-radius: 4px;
+}
 
-    .texto-oracao p:last-child {
-        margin-bottom: 20px;
-    }
+.texto-oracao p {
+  text-align: center;
+  line-height: 1.8;
+  margin-bottom: 28px;
+}
 
-    /* Fundo branco e texto preto nas orações individuais */
-    body:has(.pagina.ativa:not(#inicio)) {
-        background: white;
-        color: black;
-    }
+body:has(.pagina.ativa:not(#inicio)) {
+  background: white;
+  color: black;
+}
 
-    .pagina:not(#inicio) h1 {
-        color: black;
-    }
+.pagina:not(#inicio) h1 {
+  color: #FF0000;
+}
 
-    @media (max-width: 600px) {
-        body {
-            padding: 15px;
-            font-size: 17px;
-        }
+.link-manha {
+  text-align: center;
+  margin: 0 0 24px;
+}
 
-        main {
-            margin: 10px auto;
-        }
+.link-manha a {
+  color: #0066CC;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-size: 21px;
+  line-height: 1.5;
+}
 
-        .imagem-oracao {
-            width: 250px;
-        }
-    }
+@media (max-width: 600px) {
+  body {
+    padding: 20px;
+    font-size: 22px;
+    line-height: 1.7;
+  }
+
+  main {
+    margin: 12px auto;
+  }
+
+  h1 {
+    font-size: 29px;
+  }
+
+  h2 {
+    font-size: 25px;
+    margin-top: 34px;
+  }
+
+  p {
+    margin-bottom: 19px;
+  }
+
+  .lista-oracoes a {
+    font-size: 23px;
+  }
+
+  .imagem-oracao {
+    width: 260px;
+  }
+
+  .texto-oracao p {
+    font-size: 21px;
+    line-height: 1.85;
+  }
+}
 </style>
 </head>
 
@@ -145,6 +187,10 @@
 <section id="inicio" class="pagina ativa">
 
 <h1>ORAÇÃO DA NOITE</h1>
+
+<p class="link-manha">
+  <a href="index.html">Ou troque para a Oração da Manhã</a>
+</p>
 
 <hr>
 
@@ -224,11 +270,11 @@ e a Tua misericórdia renovada.
 <h2>Orações Tradicionais</h2>
 
 <div class="lista-oracoes">
-    <a href="#pai-nosso">Pai-Nosso</a>
-    <a href="#credo">Credo Apostólico</a>
-    <a href="#ave-maria">Ave-Maria</a>
-    <a href="#santo-anjo">Santo Anjo do Senhor</a>
-    <a href="#gloria">Glória ao Pai</a>
+  <a href="#pai-nosso">Pai-Nosso</a>
+  <a href="#credo">Credo Apostólico</a>
+  <a href="#ave-maria">Ave-Maria</a>
+  <a href="#santo-anjo">Santo Anjo do Senhor</a>
+  <a href="#gloria">Glória ao Pai</a>
 </div>
 
 <hr>
@@ -266,7 +312,6 @@ e do Espírito Santo. Amém.
 
 </section>
 
-
 <!-- PAI-NOSSO -->
 <section id="pai-nosso" class="pagina">
 
@@ -274,13 +319,12 @@ e do Espírito Santo. Amém.
 
 <h1>PAI-NOSSO</h1>
 
-<img
-    class="imagem-oracao"
-    src="jesus.png"
-    alt="Imagem de Jesus Cristo crucificado"
->
+<img class="imagem-oracao"
+src="jesus.png"
+alt="Imagem de Jesus Cristo crucificado">
 
 <div class="texto-oracao">
+
 <p>
 Pai nosso que estais no céu,<br>
 santificado seja o vosso nome;<br>
@@ -297,10 +341,9 @@ a quem nos tem ofendido;<br>
 e não nos deixeis cair em tentação,<br>
 mas livrai-nos do mal. <strong>Amém.</strong>
 </p>
+
 </div>
-
 </section>
-
 
 <!-- CREDO APOSTÓLICO -->
 <section id="credo" class="pagina">
@@ -309,13 +352,12 @@ mas livrai-nos do mal. <strong>Amém.</strong>
 
 <h1>CREDO APOSTÓLICO</h1>
 
-<img
-    class="imagem-oracao"
-    src="santissima-trindade.png"
-    alt="Imagem da Santíssima Trindade"
->
+<img class="imagem-oracao"
+src="santissima-trindade.png"
+alt="Imagem da Santíssima Trindade">
 
 <div class="texto-oracao">
+
 <p>
 Creio em Deus Pai todo-poderoso,<br>
 criador do céu e da terra;<br>
@@ -341,10 +383,9 @@ na ressurreição da carne;<br>
 na vida eterna.<br>
 <strong>Amém.</strong>
 </p>
+
 </div>
-
 </section>
-
 
 <!-- AVE-MARIA -->
 <section id="ave-maria" class="pagina">
@@ -353,13 +394,12 @@ na vida eterna.<br>
 
 <h1>AVE-MARIA</h1>
 
-<img
-    class="imagem-oracao"
-    src="nossa-senhora.png"
-    alt="Imagem de Nossa Senhora"
->
+<img class="imagem-oracao"
+src="nossa-senhora.png"
+alt="Imagem de Nossa Senhora">
 
 <div class="texto-oracao">
+
 <p>
 Ave Maria, cheia de graça,<br>
 o Senhor é convosco;<br>
@@ -373,10 +413,9 @@ rogai por nós, pecadores,<br>
 agora e na hora de nossa morte.<br>
 <strong>Amém.</strong>
 </p>
+
 </div>
-
 </section>
-
 
 <!-- SANTO ANJO -->
 <section id="santo-anjo" class="pagina">
@@ -385,13 +424,12 @@ agora e na hora de nossa morte.<br>
 
 <h1>SANTO ANJO DO SENHOR</h1>
 
-<img
-    class="imagem-oracao"
-    src="anjo-da-guarda.png"
-    alt="Imagem do Anjo da Guarda"
->
+<img class="imagem-oracao"
+src="anjo-da-guarda.png"
+alt="Imagem do Anjo da Guarda">
 
 <div class="texto-oracao">
+
 <p>
 Santo Anjo do Senhor,<br>
 meu zeloso guardador,<br>
@@ -400,10 +438,9 @@ sempre me rege, me guarda,<br>
 me governa e me ilumina.<br>
 <strong>Amém.</strong>
 </p>
+
 </div>
-
 </section>
-
 
 <!-- GLÓRIA AO PAI -->
 <section id="gloria" class="pagina">
@@ -412,13 +449,12 @@ me governa e me ilumina.<br>
 
 <h1>GLÓRIA AO PAI</h1>
 
-<img
-    class="imagem-oracao"
-    src="gloria-ao-pai.png"
-    alt="Imagem da Santíssima Trindade"
->
+<img class="imagem-oracao"
+src="gloria-ao-pai.png"
+alt="Imagem da Santíssima Trindade">
 
 <div class="texto-oracao">
+
 <p>
 Glória ao Pai, ao Filho<br>
 e ao Espírito Santo.<br>
@@ -426,29 +462,27 @@ Como era no princípio,<br>
 agora e sempre.<br>
 <strong>Amém.</strong>
 </p>
-</div>
 
+</div>
 </section>
 
 </main>
 
 <script>
 function mostrarPagina() {
-    const paginas = document.querySelectorAll(".pagina");
+  const paginas = document.querySelectorAll(".pagina");
+  let id = window.location.hash.substring(1);
 
-    let id = window.location.hash.substring(1);
+  if (!document.getElementById(id) || !id) {
+    id = "inicio";
+  }
 
-    if (!document.getElementById(id) || !id) {
-        id = "inicio";
-    }
+  paginas.forEach(function(pagina) {
+    pagina.classList.remove("ativa");
+  });
 
-    paginas.forEach(function(pagina) {
-        pagina.classList.remove("ativa");
-    });
-
-    document.getElementById(id).classList.add("ativa");
-
-    window.scrollTo(0, 0);
+  document.getElementById(id).classList.add("ativa");
+  window.scrollTo(0, 0);
 }
 
 window.addEventListener("hashchange", mostrarPagina);
