@@ -1,0 +1,20 @@
+PWA ORAÇÃO DA MANHÃ
+
+Envie index.html, manifest.webmanifest, service-worker.js e a pasta icons/ para a raiz do repositório GitHub Pages /oracao/.
+
+Mantenha o arquivo noite.html na mesma raiz. O link Oração da Noite abre noite.html dentro do escopo do aplicativo.
+
+Crie/mantenha a pasta imagens/ e envie seus arquivos PNG com estes nomes exatos:
+jesus.png
+santissima-trindade.png
+nossa-senhora.png
+anjo-da-guarda.png
+gloria-ao-pai.png
+
+As imagens das orações NÃO estão incluídas neste pacote: use as ilustrações PNG que você escolheu.
+
+Abra https://danielribeiro273.github.io/oracao/ no celular depois de publicar.
+Android/Chrome: menu > Instalar app ou Adicionar à tela inicial.
+iPhone/Safari: Compartilhar > Adicionar à Tela de Início > Adicionar.
+
+O uso offline da página da noite depende de noite.html ter sido publicado e armazenado no cache após uma visita online.
