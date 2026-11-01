@@ -9,8 +9,8 @@
 <style>
     body {
         font-family: "Times New Roman", Times, serif;
-        background: white;
-        color: black;
+        background: #F5EBD9;
+        color: #29241F;
         font-size: 18px;
         line-height: 1.6;
         margin: 0;
@@ -26,12 +26,16 @@
         text-align: center;
         font-size: 28px;
         margin-bottom: 15px;
+        color: #FF0000;
+        font-weight: bold;
     }
 
     h2 {
         font-size: 21px;
         margin-top: 35px;
         margin-bottom: 12px;
+        color: #0066CC;
+        font-weight: normal;
     }
 
     p {
@@ -41,13 +45,16 @@
 
     hr {
         border: 0;
-        border-top: 1px solid #999;
+        border-top: 1px solid #D2B99D;
         margin: 25px 0;
     }
 
     .final {
         text-align: center;
         margin-top: 30px;
+        color: #FF0000;
+        font-weight: bold;
+        font-style: italic;
     }
 
     /* Páginas individuais */
@@ -62,19 +69,29 @@
     /* Links das orações */
     .lista-oracoes a {
         display: block;
-        color: #0645ad;
+        color: #0066CC;
         text-decoration: underline;
         margin: 12px 0;
         cursor: pointer;
         font-size: 19px;
+        font-weight: normal;
+    }
+
+    .lista-oracoes a:hover {
+        color: #FF0000;
     }
 
     .voltar {
         display: inline-block;
         margin-bottom: 25px;
-        color: #0645ad;
+        color: black;
         text-decoration: underline;
         cursor: pointer;
+        font-style: normal;
+    }
+
+    .voltar:hover {
+        color: black;
     }
 
     .imagem-oracao {
@@ -86,8 +103,23 @@
         border-radius: 4px;
     }
 
+    /* Orações tradicionais centralizadas */
     .texto-oracao p {
-        text-align: left;
+        text-align: center;
+    }
+
+    .texto-oracao p:last-child {
+        margin-bottom: 20px;
+    }
+
+    /* Fundo branco e texto preto nas orações individuais */
+    body:has(.pagina.ativa:not(#inicio)) {
+        background: white;
+        color: black;
+    }
+
+    .pagina:not(#inicio) h1 {
+        color: black;
     }
 
     @media (max-width: 600px) {
@@ -120,11 +152,11 @@
 <h2>Sinal da Cruz e Entrega do Dia</h2>
 
 <p>
-Em nome do Pai, e do Filho,
-e do Espírito Santo. Amém.
+<em>Em nome do Pai, e do Filho,
+e do Espírito Santo. Amém.</em>
 </p>
 
-<p>Bom dia, meu Senhor e meu Deus.</p>
+<p><strong>Bom dia, meu Senhor e meu Deus.</strong></p>
 
 <p>
 Mais um dia começa e eu coloco nas Tuas mãos
@@ -144,7 +176,7 @@ e em tudo o que eu fizer neste dia.
 <h2>Pedido de Proteção e Paciência</h2>
 
 <p>
-Senhor Jesus, dá-me sabedoria para o dia de hoje.
+<strong>Senhor Jesus, dá-me sabedoria para o dia de hoje.</strong>
 </p>
 
 <p>
@@ -166,7 +198,7 @@ Ensina-me a impor limites com respeito,
 a agir com prudência e a preservar
 a minha saúde mental.
 Quando me faltar paciência,
-sê Tu a minha força.
+<strong><em>sê Tu a minha força.</em></strong>
 </p>
 
 <h2>Pela Família e pelas Intenções</h2>
@@ -180,7 +212,7 @@ que não conseguimos enfrentar sozinhos.
 </p>
 
 <p>
-Nossa Senhora, Mãe de Jesus e nossa Mãe,
+<strong>Nossa Senhora, Mãe de Jesus e nossa Mãe,</strong>
 intercede por mim e pela minha família.
 Acompanha-nos neste dia e apresenta
 a teu Filho as nossas necessidades,
@@ -229,9 +261,9 @@ recebidas.
 </p>
 
 <p>
-Por nosso Senhor Jesus Cristo,
+<em>Por nosso Senhor Jesus Cristo,
 vosso Filho, na unidade do Espírito Santo.
-Amém.
+<strong>Amém.</strong></em>
 </p>
 
 <p class="final">
@@ -270,7 +302,7 @@ perdoai-nos as nossas ofensas,<br>
 assim como nós perdoamos<br>
 a quem nos tem ofendido;<br>
 e não nos deixeis cair em tentação,<br>
-mas livrai-nos do mal. Amém.
+mas livrai-nos do mal. <strong>Amém.</strong>
 </p>
 </div>
 
@@ -314,7 +346,7 @@ na comunhão dos santos;<br>
 na remissão dos pecados;<br>
 na ressurreição da carne;<br>
 na vida eterna.<br>
-Amém.
+<strong>Amém.</strong>
 </p>
 </div>
 
@@ -346,7 +378,7 @@ e bendito é o fruto do vosso ventre, Jesus.
 Santa Maria, Mãe de Deus,<br>
 rogai por nós, pecadores,<br>
 agora e na hora de nossa morte.<br>
-Amém.
+<strong>Amém.</strong>
 </p>
 </div>
 
@@ -373,7 +405,7 @@ meu zeloso guardador,<br>
 se a ti me confiou a piedade divina,<br>
 sempre me rege, me guarda,<br>
 me governa e me ilumina.<br>
-Amém.
+<strong>Amém.</strong>
 </p>
 </div>
 
@@ -399,7 +431,7 @@ Glória ao Pai, ao Filho<br>
 e ao Espírito Santo.<br>
 Como era no princípio,<br>
 agora e sempre.<br>
-Amém.
+<strong>Amém.</strong>
 </p>
 </div>
 
